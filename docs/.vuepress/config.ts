@@ -4,6 +4,7 @@ import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 
 export default defineUserConfig({
+  base: "/Blog/",
   locales: {
     "/": {
       lang: "en-US",
