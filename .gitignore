@@ -1,5 +1,7 @@
 node_modules/
 .DS_Store
-.vuepress
+**/.vuepress/cache
+dist
+**/.vuepress/.temp
 .vscode
 .idea
