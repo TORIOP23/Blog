@@ -1,23 +1,32 @@
 {
-	"name": "blog",
-	"description": "TORIOP blog",
-	"version": "0.0.1",
-	"license": "MIT",
-	"type": "module",
-	"author": "TORIOP",
-	"scripts": {
-		"docs:build": "vuepress build docs",
-		"docs:clean-dev": "vuepress dev docs --clean-cache",
-		"docs:dev": "vuepress dev docs",
-		"docs:update-package": "pnpm dlx vp-update"
-	},
-	"devDependencies": {
-		"@vuepress/bundler-vite": "2.0.0-rc.20",
-		"@vuepress/theme-default": "2.0.0-rc.88",
-		"sass-embedded": "^1.86.0",
-		"vue": "^3.5.13",
-		"vuepress": "2.0.0-rc.20",
-		"@vuepress/plugin-blog": "2.0.0-rc.86"
-	},
-	"packageManager": "pnpm@10.17.1"
+  "name": "blog",
+  "description": "TORIOP blog",
+  "version": "0.0.1",
+  "license": "MIT",
+  "type": "module",
+  "author": "TORIOP",
+  "scripts": {
+    "docs:build": "vuepress build docs",
+    "docs:clean-dev": "vuepress dev docs --clean-cache",
+    "docs:dev": "vuepress dev docs",
+    "docs:update-package": "pnpm dlx vp-update",
+    "prepare": "husky"
+  },
+  "nano-staged": {
+    "**/*": "prettier --write --ignore-unknown",
+    ".md": "markdownlint-cli2"
+  },
+  "devDependencies": {
+    "@vuepress/bundler-vite": "2.0.0-rc.20",
+    "@vuepress/plugin-blog": "2.0.0-rc.86",
+    "@vuepress/theme-default": "2.0.0-rc.88",
+    "husky": "^9.1.7",
+    "markdownlint-cli2": "^0.18.1",
+    "nano-staged": "^0.8.0",
+    "prettier": "^3.6.2",
+    "sass-embedded": "^1.86.0",
+    "vue": "^3.5.13",
+    "vuepress": "2.0.0-rc.20"
+  },
+  "packageManager": "pnpm@10.17.1"
 }
